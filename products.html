@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products - Shree Radha Krishna Steels</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .fade-in {
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+        }
+        .fade-in.active {
+            opacity: 1;
+        }
+        .slide-in {
+            transform: translateX(-30px);
+            opacity: 0;
+            transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+        }
+        .slide-in.active {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        .slide-in-right {
+            transform: translateX(30px);
+            opacity: 0;
+            transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+        }
+        .slide-in-right.active {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        .custom-bg {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+        }
+        /* Mobile-first styles */
+        body {
+            font-size: 16px;
+            padding-top: 0;
+        }
+        .main-content {
+            padding-top: 5rem;
+        }
+        .hero-section {
+            background-image: linear-gradient(to right, #6366f1, #8b5cf6);
+            color: white;
+            text-align: center;
+            padding-top: 6rem;
+            padding-bottom: 3rem;
+        }
+        .hero-section h1 {
+            font-size: 2.25rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            line-height: 2.5rem;
+        }
+        .hero-section p {
+            font-size: 1rem;
+            max-width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.75;
+        }
+        .section {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
+        .grid-cols-md-2 {
+            grid-template-columns: 1fr;
+        }
+        .lg\:grid-cols-3 {
+            grid-template-columns: 1fr;
+        }
+        .md\:w-1\/2 {
+            width: 100%;
+        }
+        .md\:items-center {
+            align-items: flex-start;
+        }
+        .md\:text-left {
+            text-align: left;
+        }
+        .md\:text-4xl {
+            font-size: 2.25rem;
+        }
+        .md\:mb-12 {
+            margin-bottom: 2rem;
+        }
+        .md\:flex {
+            display: block;
+        }
+        .mobile-nav {
+            display: flex;
+        }
+        .desktop-nav {
+            display: none;
+        }
+        .hamburger {
+            cursor: pointer;
+            display: block;
+        }
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background: #fff;
+            margin: 5px 0;
+            transition: all 0.3s ease;
+        }
+        .nav-open .hamburger div:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .nav-open .hamburger div:nth-child(2) {
+            opacity: 0;
+        }
+        .nav-open .hamburger div:nth-child(3) {
+            transform rotate(-45deg) translate(7px, -7px);
+        }
+        .mobile-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: rgba(79, 70, 229, 0.95);
+            padding: 1rem;
+        }
+        .mobile-menu.active {
+            display: block;
+        }
+        .mobile-menu a {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+        }
+        .mobile-menu a:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        /* Desktop styles */
+        @media (min-width: 768px) {
+            .main-content {
+                padding-top: 6rem;
+            }
+            .hero-section {
+                padding-top: 8rem;
+                padding-bottom: 4rem;
+            }
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+            .hero-section p {
+                font-size: 1.125rem;
+                max-width: 6xl;
+            }
+            .section {
+                padding-top: 6rem;
+                padding-bottom: 6rem;
+            }
+            .grid-cols-md-2 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .lg\:grid-cols-3 {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .md\:w-1\/2 {
+                width: 50%;
+            }
+            .md\:items-center {
+                align-items: center;
+            }
+            .md\:text-left {
+                text-align: left;
+            }
+            .md\:text-4xl {
+                font-size: 2.5rem;
+            }
+            .md\:mb-12 {
+                margin-bottom: 3rem;
+            }
+            .md\:flex {
+                display: flex;
+            }
+            .mobile-nav {
+                display: none;
+            }
+            .desktop-nav {
+                display: flex;
+            }
+            .hamburger {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-inter">
+    <header class="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 p-4 flex justify-between items-center text-white fixed w-full z-50 shadow-lg">
+        <div class="text-xl font-bold">SHREE RADHA KRISHNA STEELS</div>
+        <div class="mobile-nav">
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div class="desktop-nav space-x-6">
+            <a href="/" class="hover:text-yellow-300 transition">Home</a>
+            <a href="/products.html" class="hover:text-yellow-300 transition">Products</a>
+            <a href="/about.html" class="hover:text-yellow-300 transition">About Us</a>
+            <a href="/#why-us" class="hover:text-yellow-300 transition">Why Us</a>
+            <a href="/#contact" class="hover:text-yellow-300 transition">Contact</a>
+        </div>
+        <nav class="mobile-menu" id="mobileMenu">
+            <a href="/" class="hover:text-yellow-300 transition">Home</a>
+            <a href="/products.html" class="hover:text-yellow-300 transition">Products</a>
+            <a href="/about.html" class="hover:text-yellow-300 transition">About Us</a>
+            <a href="/#why-us" class="hover:text-yellow-300 transition">Why Us</a>
+            <a href="/#contact" class="hover:text-yellow-300 transition">Contact</a>
+        </nav>
+    </header>
+    <main class="main-content">
+        <section class="hero-section slide-in">
+            <h1 class="text-4xl font-bold mb-8">Our Products</h1>
+            <p class="max-w-3xl mx-auto text-lg mb-12">
+                Your Trusted Partner for Quality Steel Products.
+            </p>
+        </section>
+        <section class="py-16 md:py-24 custom-bg text-gray-900 section">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12 fade-in text-indigo-700">
+                    Explore Our Products
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden slide-in card-hover" style="background-image: url('steelbeams.jpg'); background-size: cover; background-position: center; background-blend-mode: multiply; background-color: rgba(255,255,255,0.7);">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-indigo-700">Steel Beams</h3>
+                            <p class="text-gray-600 mb-4">Structural steel beams of various sizes and grades for robust construction.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden slide-in card-hover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-indigo-700">Steel Pipes</h3>
+                            <p class="text-gray-600 mb-4">Durable steel pipes for water supply, sewage, and industrial applications.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden slide-in card-hover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-indigo-700">TMT Bars</h3>
+                            <p class="text-gray-600 mb-4">High-strength, corrosion-resistant TMT bars for reinforced concrete structures.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden slide-in card-hover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-indigo-700">Steel Sheets</h3>
+                            <p class="text-gray-600 mb-4">Versatile steel sheets for roofing, cladding, fabrication, and automotive uses.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden slide-in card-hover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-indigo-700">Hardware Fittings</h3>
+                            <p class="text-gray-600 mb-4">A comprehensive range of hardware fittings for various construction and industrial needs.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden slide-in card-hover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-indigo-700">Galvanized Steel</h3>
+                            <p class="text-gray-600 mb-4">Corrosion-protected galvanized steel products for long-lasting performance.</p>
+                        </div>
+                    </div>
+                     <div class="bg-white rounded-2xl shadow-xl overflow-hidden slide-in card-hover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-indigo-700">Stainless Steel</h3>
+                            <p class="text-gray-600 mb-4">High-quality stainless steel products known for their durability.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden slide-in card-hover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-indigo-700">Industrial Fasteners</h3>
+                            <p class="text-gray-600 mb-4">A wide selection of industrial fasteners for secure connections.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden slide-in card-hover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-indigo-700">Alloy Steel</h3>
+                            <p class="text-gray-600 mb-4">High strength Alloy Steel for special purposes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        function revealElements() {
+            const elements = document.querySelectorAll('.fade-in, .slide-in, .slide-in-right');
+            for (let i = 0; i < elements.length; i++) {
+                let windowHeight = window.innerHeight;
+                let elementTop = elements[i].getBoundingClientRect().top;
+                let elementVisible = 100;
+                if (elementTop < windowHeight - elementVisible) {
+                    elements[i].classList.add('active');
+                } else {
+                    elements[i].classList.remove('active');
+                }
+            }
+        }
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const body = document.body;
+            menu.classList.toggle('active');
+            body.classList.toggle('nav-open');
+        }
+        window.addEventListener('scroll', revealElements);
+        revealElements();
+    </script>
+</body>
+</html>
