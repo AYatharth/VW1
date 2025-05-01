@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | SHREE RADHA KRISHNA STEELS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #4a5568;
+        }
+
+        .custom-bg {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 0.5rem;
+            margin-bottom: 1.25rem;
+            font-family: inherit;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #90caf9;
+            box-shadow: 0 0 0 3px rgba(144, 202, 249, 0.2);
+        }
+
+        .form-textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 0.5rem;
+            margin-bottom: 1.25rem;
+            font-family: inherit;
+            resize: vertical;
+        }
+
+        .form-textarea:focus {
+            outline: none;
+            border-color: #90caf9;
+            box-shadow: 0 0 0 3px rgba(144, 202, 249, 0.2);
+        }
+
+        .form-select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 0.5rem;
+            margin-bottom: 1.25rem;
+            font-family: inherit;
+        }
+
+        .form-select:focus {
+            outline: none;
+            border-color: #90caf9;
+            box-shadow: 0 0 0 3px rgba(144, 202, 249, 0.2);
+        }
+
+        .submit-button {
+            background-color: #4f46e5;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-family: inherit;
+            width: 100%;
+        }
+
+        .submit-button:hover {
+            background-color: #4338ca;
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .contact-info h1 {
+            color: #4f46e5;
+            font-size: 2.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info p {
+            font-size: 1rem;
+            line-height: 1.7;
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        .form-section {
+            padding-top: 6rem;
+            padding-bottom: 2rem;
+        }
+
+        @media (max-width: 767px) {
+            .form-container {
+                padding: 1.5rem;
+            }
+
+            .contact-info h1 {
+                font-size: 2rem;
+            }
+
+            .contact-info p{
+                font-size: 0.9rem;
+            }
+            .form-section {
+                padding-top: 5rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .contact-info h1 {
+                font-size: 2.75rem;
+            }
+             .contact-info p{
+                font-size: 1.125rem;
+                max-width: 60%;
+                padding-left: 0;
+                padding-right: 0;
+            }
+            .submit-button {
+                width: auto;
+            }
+        }
+        @media (min-width: 1024px){
+            .contact-info h1{
+                font-size: 3rem;
+            }
+            .contact-info p{
+                 max-width: 40rem;
+            }
+        }
+
+        .nav-bg {
+            background-image: linear-gradient(to right, #6366f1, #8b5cf6);
+        }
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.2s ease;
+        }
+
+        .nav-link:hover {
+            color: #f5d300;
+        }
+
+        .hamburger {
+            display: block;
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 0.375rem;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            z-index: 10;
+        }
+
+        .hamburger-icon {
+            width: 1.5rem;
+            height: 0.125rem;
+            background-color: white;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger-icon::before,
+        .hamburger-icon::after {
+            content: '';
+            position: absolute;
+            width: 1.5rem;
+            height: 0.125rem;
+            background-color: white;
+            top: 0.5rem;
+            left: 0;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger-icon::after {
+            top: -0.5rem;
+        }
+
+        .open .hamburger-icon {
+            background-color: transparent;
+        }
+
+        .open .hamburger-icon::before {
+            transform: rotate(45deg);
+            top: 0;
+        }
+
+        .open .hamburger-icon::after {
+            transform: rotate(-45deg);
+            top: 0;
+        }
+
+        .nav-menu {
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100%;
+            background-image: linear-gradient(to bottom, #6366f1, #8b5cf6);
+            width: 0;
+            overflow: hidden;
+            transition: width 0.3s ease;
+            z-index: 5;
+            padding-top: 4rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .nav-menu.open {
+            width: 80%;
+        }
+
+        @media (min-width: 640px) {
+            .nav-menu.open {
+                width: 320px;
+            }
+        }
+
+        .nav-menu a {
+            color: white;
+            padding: 1rem 1.5rem;
+            text-decoration: none;
+            font-size: 1.25rem;
+            transition: color 0.2s ease;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            width: 100%;
+            text-align: center;
+        }
+
+        .nav-menu a:hover {
+            color: #f5d300;
+        }
+
+        .nav-menu a.active {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .close-icon {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            z-index: 11;
+        }
+
+        .no-scroll {
+            overflow: hidden;
+        }
+        .header-nav{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <header class="header-nav">
+        <nav class="nav-bg p-4 flex justify-between items-center text-white shadow-lg">
+            <div class="text-xl font-bold">SHREE RADHA KRISHNA STEELS</div>
+            <div class="hamburger md:hidden" id="hamburger-btn">
+                <div class="hamburger-icon"></div>
+            </div>
+            <div class="space-x-4 sm:space-x-6 hidden md:flex">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="whyus.html" class="nav-link">Why Us</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <div class="close-icon" id="close-menu">&times;</div>
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="whyus.html" class="nav-link">Why Us</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="form-section custom-bg">
+            <div class="container mx-auto">
+                <div class="contact-info">
+                    <h1 class="text-4xl font-bold mb-8 text-indigo-700">Get in Touch with SHREE RADHA KRISHNA STEELS</h1>
+                    <p class="text-lg  mb-12">
+                        Have a query? Need a quote? Want to place an order? We are here to assist you with your every need.
+                    </p>
+                </div>
+                <div class="form-container">
+                    <form action="#" method="POST" class="max-w-lg mx-auto space-y-6">
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 text-sm font-bold mb-2 text-left">Your Name</label>
+                            <input type="text" name="name" id="name" placeholder="Your Name" class="form-input" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="phone" class="block text-gray-700 text-sm font-bold mb-2 text-left">Your Phone Number</label>
+                            <input type="tel" name="phone" id="phone" placeholder="Your Phone Number" class="form-input" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 text-sm font-bold mb-2 text-left">Your Email Address</label>
+                            <input type="email" name="email" id="email" placeholder="Your Email Address" class="form-input" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="product" class="block text-gray-700 text-sm font-bold mb-2 text-left">Select Product</label>
+                            <select name="product" id="product" class="form-select" required>
+                                <option value="" disabled selected>Select Product</option>
+                                <option value="Iron & Steel">Iron & Steel</option>
+                                <option value="TMT Bars">TMT Bars</option>
+                                <option value="Pipes">Pipes</option>
+                                <option value="Cement">Cement</option>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block text-gray-700 text-sm font-bold mb-2 text-left">Your Message</label>
+                            <textarea name="message" id="message" rows="5" placeholder="Your Message" class="form-textarea" required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="submit-button">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-gradient-to-r from-indigo-700 to-purple-700 text-white text-center p-4">
+        © 2025 SHREE RADHA KRISHNA STEELS. All rights reserved.
+    </footer>
+    <script>
+        const hamburgerBtn = document.getElementById("hamburger-btn");
+        const navMenu = document.getElementById("nav-menu");
+        const closeMenuBtn = document.getElementById("close-menu");
+        const navLinks = document.querySelectorAll('.nav-menu a');
+        const body = document.querySelector('body');
+
+        function toggleNav() {
+            navMenu.classList.toggle("open");
+            body.classList.toggle('no-scroll');
+        }
+
+        hamburgerBtn.addEventListener("click", toggleNav);
+        closeMenuBtn.addEventListener("click", toggleNav);
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('open');
+                body.classList.remove('no-scroll');
+            });
+        });
+
+        document.addEventListener('click', (event) => {
+            if (navMenu.classList.contains('open') && !navMenu.contains(event.target) && event.target !== hamburgerBtn) {
+                toggleNav();
+            }
+        });
+    </script>
+</body>
+</html>
