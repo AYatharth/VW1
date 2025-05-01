@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Us | Shree Radha Krishna Steels</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-size: 16px;
+        }
+        .main-content {
+            padding-top: 5rem;
+        }
+        .hero-section {
+            background-image: linear-gradient(to right, #6366f1, #8b5cf6);
+            color: white;
+            text-align: center;
+            padding-top: 6rem;
+            padding-bottom: 3rem;
+        }
+        .hero-section h1 {
+            font-size: 2.25rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        .hero-section p {
+            font-size: 1rem;
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        .section {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
+        .responsive-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            margin-top: 1rem;
+        }
+        .card {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s ease;
+            text-align: left;
+        }
+        .card:hover {
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: #4c51bf;
+        }
+        .card p {
+            font-size: 1rem;
+            color: #718096;
+            line-height: 1.6;
+        }
+        @media (min-width: 640px) {
+            .responsive-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+            .main-content {
+                padding-top: 6rem;
+            }
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+            .hero-section p {
+                font-size: 1.125rem;
+                max-width: 48rem;
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+        @media (min-width: 768px) {
+            .hero-section {
+                padding-top: 8rem;
+                padding-bottom: 4rem;
+            }
+            .section {
+                padding-top: 6rem;
+                padding-bottom: 6rem;
+            }
+        }
+        @media (min-width: 1024px) {
+            .responsive-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-inter text-gray-900">
+    <header class="nav-bg p-4 flex justify-between items-center text-white fixed w-full z-50 shadow-lg">
+        <div class="text-xl font-bold">SHREE RADHA KRISHNA STEELS</div>
+        <div class="hamburger md:hidden" id="hamburger-btn" aria-expanded="false" aria-controls="nav-menu">
+            <div class="hamburger-icon"></div>
+        </div>
+        <nav class="space-x-6 hidden md:flex">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="products.html" class="nav-link">Products</a>
+            <a href="about.html" class="nav-link">About Us</a>
+            <a href="whyus.html" class="nav-link active">Why Us</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+        <nav class="nav-menu" id="nav-menu">
+            <div class="close-icon" id="close-menu">×</div>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="about.html">About Us</a>
+            <a href="whyus.html" class="active">Why Us</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <main class="main-content">
+        <section class="hero-section slide-in">
+            <h1 class="text-4xl font-bold mb-8 md:text-5xl">Why Choose Shree Radha Krishna Steels?</h1>
+            <p class="max-w-3xl mx-auto text-lg mb-12">
+                When it comes to construction materials, you deserve the best - and we deliver exactly that.
+            </p>
+        </section>
+        <section class="section text-center custom-bg">
+            <div class="container mx-auto">
+                <div class="responsive-grid">
+                    <div class="card slide-in">
+                        <h3>Quality Assurance</h3>
+                        <p>Only the finest certified products.</p>
+                    </div>
+                    <div class="card slide-in">
+                        <h3>Nominal Pricing</h3>
+                        <p>Competitive rates without compromising on quality.</p>
+                    </div>
+                    <div class="card slide-in">
+                        <h3>Door-to-Door Delivery</h3>
+                        <p>Fast, safe, and reliable logistics.</p>
+                    </div>
+                    <div class="card slide-in">
+                        <h3>Wide Range</h3>
+                        <p>From small orders to bulk consignments.</p>
+                    </div>
+                    <div class="card slide-in">
+                        <h3>Customer-Centric Approach</h3>
+                        <p>Personalized services for your needs.</p>
+                    </div>
+                    <div class="card slide-in">
+                        <h3>Experienced Team</h3>
+                        <p>Professional guidance for selecting the right materials.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer-bg text-white text-center p-4">
+        <p>© 2025 SHREE RADHA KRISHNA STEELS. All rights reserved.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

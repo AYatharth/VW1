@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Shree Radha Krishna Steels</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-size: 16px;
+        }
+        .form-section {
+            padding-top: 5rem;
+            padding-bottom: 2rem;
+        }
+        .form-container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+        .form-input,
+        .form-textarea,
+        .form-select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 0.5rem;
+            margin-bottom: 1.25rem;
+            font-family: inherit;
+        }
+        .form-input:focus,
+        .form-textarea:focus,
+        .form-select:focus {
+            outline: none;
+            border-color: #90caf9;
+            box-shadow: 0 0 0 3px rgba(144, 202, 249, 0.2);
+        }
+        .form-textarea {
+            resize: vertical;
+        }
+        .submit-button {
+            background-color: #4f46e5;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-family: inherit;
+            width: 100%;
+        }
+        .submit-button:hover {
+            background-color: #4338ca;
+        }
+        .contact-info {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .contact-info h1 {
+            font-size: 2.25rem;
+            margin-bottom: 1rem;
+            color: #4f46e5;
+        }
+        .contact-info p {
+            font-size: 1rem;
+            line-height: 1.7;
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        @media (max-width: 767px) {
+            .form-container {
+                padding: 1.5rem;
+            }
+            .contact-info h1 {
+                font-size: 2rem;
+            }
+            .contact-info p {
+                font-size: 0.9rem;
+            }
+        }
+        @media (min-width: 768px) {
+            .form-section {
+                padding-top: 6rem;
+                padding-bottom: 4rem;
+            }
+            .contact-info h1 {
+                font-size: 2.75rem;
+            }
+            .contact-info p {
+                font-size: 1.125rem;
+                max-width: 60%;
+                padding-left: 0;
+                padding-right: 0;
+            }
+            .submit-button {
+                width: auto;
+            }
+        }
+        @media (min-width: 1024px) {
+            .contact-info h1 {
+                font-size: 3rem;
+            }
+            .contact-info p {
+                max-width: 40rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-inter text-gray-900">
+    <header class="nav-bg p-4 flex justify-between items-center text-white fixed w-full z-50 shadow-lg">
+        <div class="text-xl font-bold">SHREE RADHA KRISHNA STEELS</div>
+        <div class="hamburger md:hidden" id="hamburger-btn" aria-expanded="false" aria-controls="nav-menu">
+            <div class="hamburger-icon"></div>
+        </div>
+        <nav class="space-x-6 hidden md:flex">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="products.html" class="nav-link">Products</a>
+            <a href="about.html" class="nav-link">About Us</a>
+            <a href="whyus.html" class="nav-link">Why Us</a>
+            <a href="contact.html" class="nav-link active">Contact</a>
+        </nav>
+        <nav class="nav-menu" id="nav-menu">
+            <div class="close-icon" id="close-menu">×</div>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="about.html">About Us</a>
+            <a href="whyus.html">Why Us</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section class="form-section custom-bg">
+            <div class="container mx-auto px-4">
+                <div class="contact-info">
+                    <h1 class="text-4xl font-bold mb-8 text-indigo-700">Get in Touch with Shree Radha Krishna Steels</h1>
+                    <p class="text-lg mb-12">
+                        Have a query? Need a quote? Want to place an order? We are here to assist you with your every need.
+                    </p>
+                </div>
+                <div class="form-container">
+                    <form action="/submit-contact" method="POST" class="max-w-lg mx-auto space-y-6">
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 text-sm font-bold mb-2 text-left">Your Name</label>
+                            <input type="text" name="name" id="name" placeholder="Your Name" class="form-input" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="phone" class="block text-gray-700 text-sm font-bold mb-2 text-left">Your Phone Number</label>
+                            <input type="tel" name="phone" id="phone" placeholder="Your Phone Number" class="form-input" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 text-sm font-bold mb-2 text-left">Your Email Address</label>
+                            <input type="email" name="email" id="email" placeholder="Your Email Address" class="form-input" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="product" class="block text-gray-700 text-sm font-bold mb-2 text-left">Select Product</label>
+                            <select name="product" id="product" class="form-select" required>
+                                <option value="" disabled selected>Select Product</option>
+                                <option value="Iron & Steel">Iron & Steel</option>
+                                <option value="TMT Bars">TMT Bars</option>
+                                <option value="Pipes">Pipes</option>
+                                <option value="Cement">Cement</option>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block text-gray-700 text-sm font-bold mb-2 text-left">Your Message</label>
+                            <textarea name="message" id="message" rows="5" placeholder="Your Message" class="form-textarea" required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="submit-button">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer-bg text-white text-center p-4">
+        <p>© 2025 SHREE RADHA KRISHNA STEELS. All rights reserved.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

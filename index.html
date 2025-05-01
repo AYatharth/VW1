@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Shree Radha Krishna Steels</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-size: 16px;
+        }
+        .hero-section {
+            padding-top: 6rem;
+            padding-bottom: 3rem;
+            min-height: 100vh;
+        }
+        .hero-section h1 {
+            font-size: 2.25rem;
+            line-height: 2.5rem;
+        }
+        .hero-section p {
+            font-size: 1rem;
+            line-height: 1.5rem;
+        }
+        .section {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
+        #home {
+            padding-top: 7rem;
+            padding-bottom: 3rem;
+        }
+        @media (min-width: 768px) {
+            .hero-section {
+                padding-top: 8rem;
+                padding-bottom: 4rem;
+            }
+            .hero-section h1 {
+                font-size: 3.75rem;
+                line-height: 1.2;
+            }
+            .hero-section p {
+                font-size: 1.25rem;
+            }
+            .section {
+                padding-top: 6rem;
+                padding-bottom: 6rem;
+            }
+            #home {
+                padding-top: 8rem;
+                padding-bottom: 4rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-inter">
+    <header class="nav-bg p-4 flex justify-between items-center text-white fixed w-full z-50 shadow-lg">
+        <div class="text-xl font-bold">SHREE RADHA KRISHNA STEELS</div>
+        <div class="hamburger md:hidden" id="hamburger-btn" aria-expanded="false" aria-controls="nav-menu">
+            <div class="hamburger-icon"></div>
+        </div>
+        <nav class="space-x-6 hidden md:flex">
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="products.html" class="nav-link">Products</a>
+            <a href="about.html" class="nav-link">About Us</a>
+            <a href="whyus.html" class="nav-link">Why Us</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+        <nav class="nav-menu" id="nav-menu">
+            <div class="close-icon" id="close-menu">×</div>
+            <a href="index.html" class="active">Home</a>
+            <a href="products.html">Products</a>
+            <a href="about.html">About Us</a>
+            <a href="whyus.html">Why Us</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="relative hero-section flex items-center justify-center bg-cover bg-center" style="background-image: url('steel.JPG');">
+            <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+                <div class="container mx-auto px-4 text-center">
+                    <h1 class="text-4xl font-bold text-white mb-4 fade-in md:text-5xl">
+                        Your Trusted Partner for Quality Steel Products
+                    </h1>
+                    <p class="text-lg text-gray-200 mb-8 max-w-3xl mx-auto fade-in">
+                        Shree Radha Krishna Steels is a leading wholesale and retail supplier of high-quality steel, pipes, TMT bars, and hardware products. We are committed to providing our customers with the best products and services at competitive prices.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="products" class="section custom-bg text-gray-900">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-8 fade-in text-indigo-700 md:text-4xl">
+                    Our Products
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden slide-in card-hover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-indigo-700">Steel</h3>
+                            <p class="text-gray-600 mb-4">High-quality steel for various construction and industrial applications.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden slide-in card-hover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-indigo-700">Pipes</h3>
+                            <p class="text-gray-600 mb-4">Durable pipes for water supply, sewage, and other industrial uses.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden slide-in card-hover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-indigo-700">TMT Bars</h3>
+                            <p class="text-gray-600 mb-4">Corrosion-resistant TMT bars for strong and long-lasting construction.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden slide-in card-hover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-indigo-700">Steel Sheets</h3>
+                            <p class="text-gray-600 mb-4">High-quality steel sheets for roofing, cladding, and general fabrication.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8 text-center">
+                    <a href="products.html" class="bg-indigo-500 hover:bg-indigo-600 text-white rounded-md px-6 py-3 text-lg transition">View All</a>
+                </div>
+            </div>
+        </section>
+        <section id="about" class="section custom-bg text-gray-900">
+            <div class="container mx-auto px-4 md:flex md:items-center gap-8">
+                <div class="slide-in md:w-1/2">
+                    <img src="st.png" alt="Steel products display at Shree Radha Krishna Steels" class="rounded-2xl shadow-xl w-full max-h-96 object-cover" loading="lazy">
+                </div>
+                <div class="slide-in-right md:w-1/2">
+                    <h2 class="text-3xl font-bold mb-4 text-indigo-700 md:text-4xl">About Us</h2>
+                    <p class="text-lg text-gray-700 mb-6">Welcome to Shree Radha Krishna Steels, your one-stop destination for high-quality steel products. With years of experience in the industry, we have established ourselves as a trusted supplier of steel, pipes, TMT bars, and hardware products.</p>
+                    <p class="text-lg text-gray-700 mb-6">Our mission is to provide our customers with the best products and services at competitive prices. We are committed to quality, reliability, and customer satisfaction.</p>
+                </div>
+            </div>
+        </section>
+        <section id="why-us" class="section custom-bg text-gray-900">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-8 fade-in text-indigo-700 md:text-4xl">Why Choose Us?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white rounded-2xl shadow-xl p-6 flex items-start slide-in card-hover">
+                        <i class="fas fa-check-circle mr-4 w-6 h-6 text-indigo-500 flex-shrink-0"></i>
+                        <p class="text-gray-600">High-Quality Products</p>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-xl p-6 flex items-start slide-in card-hover">
+                        <i class="fas fa-check-circle mr-4 w-6 h-6 text-indigo-500 flex-shrink-0"></i>
+                        <p class="text-gray-600">Competitive Prices</p>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-xl p-6 flex items-start slide-in card-hover">
+                        <i class="fas fa-check-circle mr-4 w-6 h-6 text-indigo-500 flex-shrink-0"></i>
+                        <p class="text-gray-600">Wide Range of Products</p>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-xl p-6 flex items-start slide-in card-hover">
+                        <i class="fas fa-check-circle mr-4 w-6 h-6 text-indigo-500 flex-shrink-0"></i>
+                        <p class="text-gray-600">Timely Delivery</p>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-xl p-6 flex items-start slide-in card-hover">
+                        <i class="fas fa-check-circle mr-4 w-6 h-6 text-indigo-500 flex-shrink-0"></i>
+                        <p class="text-gray-600">Excellent Customer Service</p>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-xl p-6 flex items-start slide-in card-hover">
+                        <i class="fas fa-check-circle mr-4 w-6 h-6 text-indigo-500 flex-shrink-0"></i>
+                        <p class="text-gray-600">Industry Expertise</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="section custom-bg text-gray-900">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-8 fade-in text-indigo-700 md:text-4xl">Contact Us</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white rounded-2xl shadow-xl p-6 slide-in card-hover">
+                        <h3 class="text-xl font-semibold mb-4 text-indigo-700">Get in Touch</h3>
+                        <p class="text-gray-600 mb-6">Please fill out the form below to get in touch with us.</p>
+                        <form action="/submit-contact" method="POST">
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Your Name</label>
+                                <input type="text" id="name" name="name" placeholder="Your Name" class="w-full px-4 py-2 rounded-md bg-gray-100 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Your Email</label>
+                                <input type="email" id="email" name="email" placeholder="Your Email" class="w-full px-4 py-2 rounded-md bg-gray-100 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Your Message</label>
+                                <textarea id="message" name="message" placeholder="Your Message" class="w-full px-4 py-2 rounded-md bg-gray-100 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 h-32" required></textarea>
+                            </div>
+                            <button type="submit" class="bg-indigo-500 hover:bg-indigo-600 text-white w-full rounded-md px-4 py-2 text-center transition">Send Message</button>
+                        </form>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-xl p-6 slide-in-right card-hover">
+                        <h3 class="text-xl font-semibold mb-4 text-indigo-700">Contact Information</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <i class="fas fa-phone mr-4 w-5 h-5 text-blue-500"></i>
+                                <p class="text-gray-600">Phone: +91 9999999999</p>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-envelope mr-4 w-5 h-5 text-blue-500"></i>
+                                <p class="text-gray-600">Email: info@example.com</p>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-building mr-4 w-5 h-5 text-blue-500 mt-1"></i>
+                                <p class="text-gray-600">Address: 123 Industrial Area, ABC City, XYZ State, India</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer-bg text-white text-center p-4">
+        <p>© 2025 SHREE RADHA KRISHNA STEELS. All rights reserved.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
